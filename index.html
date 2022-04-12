@@ -62,7 +62,7 @@
           title.textContent = newTitle;
         };
 
-        changeTitle("This is my new title")
+        changeTitle("This is my new title");
   
         /* EXERCISE 2
          Write a function for changing the class of the title of the page in "myHeading".
@@ -181,12 +181,14 @@
          Attach an event listener to the input field in the page for console logging its value just after any keystroke.
         */
   
-        const inputField = document.getElementById("input-field").value;
+        const inputField = document.getElementById("input-field");
         // ...
-        inputField.addEventListener("click", function(e){
+        inputField.addEventListener("keyup", function(e){
             let myTyping = e.key;
-            let myBody = document.querySelector("body");
-            myBody.textContent = myTyping;
+            // console.log(e.target);
+            console.log(e.target.value);
+            // let myBody = document.querySelector("body");
+            // myBody.textContent = myTyping;
         })
         /* EXERCISE 12
          Create a welcome alert message when the page successfully loads.
